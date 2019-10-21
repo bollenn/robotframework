@@ -139,7 +139,7 @@ class VariableReplacer(object):
         for item in match.items:
             if is_dict_like(value):
                 value = self._get_dict_variable_item(name, value, item)
-            elif is_list_like(value):
+            elif is_list_like(value) or is_bytes(value):
                 value = self._get_list_variable_item(name, value, item)
             else:
                 raise VariableError(
