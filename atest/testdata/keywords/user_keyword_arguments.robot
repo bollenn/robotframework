@@ -2,6 +2,7 @@
 Library           Collections
 
 *** Variables ***
+${INT}            ${15}
 ${VAR}            Variable value
 @{LIST}           With    three    values
 &{DICT}           a=1    b=${2}
@@ -139,7 +140,7 @@ Default With List Variable
     Should Be True    $result is $arg
 
 Default With Invalid List Variable
-    [Documentation]    FAIL Resolving argument default values failed: Value of variable '\@{VAR}' is not list or list-like.
+    [Documentation]    FAIL Resolving argument default values failed: Value of variable '\@{INT}' is not iterable.
     Default With Invalid List Variable
 
 Default With Dict Variable
@@ -268,7 +269,7 @@ Default With List Variable
     [Return]    ${a}
 
 Default With Invalid List Variable
-    [Arguments]    ${invalid}=@{VAR}
+    [Arguments]    ${invalid}=@{INT}
 
 Default With Dict Variable
     [Arguments]    ${a}=&{EMPTY}    ${b}=&{DICT}
