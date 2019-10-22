@@ -99,9 +99,9 @@ Non-existing index variable
 
 Non-dict variable
     [Documentation]    FAIL
-    ...    Variable '\${INVALID}' is string, not list or dictionary, \
-    ...    and thus accessing item '${nonex}' from it is not possible.
-    Log    ${INVALID}[${nonex}]
+    ...    Variable '\${15}' is integer, which is not iterable, \
+    ...    and thus accessing item '0' from it is not possible.
+    Log    ${15}[0]
 
 Sanity check
     @{items} =    Create List
