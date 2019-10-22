@@ -3,6 +3,7 @@ Test Teardown     Set Log Level    INFO
 Variables         objects_for_call_method.py
 
 *** Variables ***
+${INT}            ${15}
 ${HTML}           <a href="http://robotframework.org">Robot Framework</a>
 @{LIST}           1    2    ${3}    ${OBJ}
 &{DICT}           a=1    b=2    ${3}=c    obj=${OBJ}
@@ -134,8 +135,8 @@ Log Many with non-existing variable
     Log Many    ${no such variable}
 
 Log Many with list variable containing non-list
-    [Documentation]    FAIL Value of variable '@{HTML}' is not list or list-like.
-    Log Many    @{HTML}
+    [Documentation]    FAIL Value of variable '@{INT}' is not iterable.
+    Log Many    @{INT}
 
 Log Many with dict variable containing non-dict
     [Documentation]    FAIL Value of variable '&{LIST}' is not dictionary or dictionary-like.
