@@ -12,8 +12,8 @@ List can overwrite scalar
     Should be equal    ${foo}      ${VARIABLE}
 
 Scalar can overwrite list
-    [Documentation]    FAIL Value of variable '\@{VARIABLE}' is not list or list-like.
-    ${variable}=    Set variable   scalar
+    [Documentation]    FAIL Value of variable '\@{VARIABLE}' is not iterable.
+    ${variable}=    Set variable   ${15}
     Log Many    @{VARIABLE}
 
 Variables from file
