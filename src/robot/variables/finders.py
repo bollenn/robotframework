@@ -24,8 +24,8 @@ except ImportError:
     get_java_properties = lambda: {}
 
 from robot.errors import DataError, VariableError
-from robot.utils import (get_env_var, get_env_vars, get_error_message, is_bytes,
-                         is_dict_like, is_list_like, normalize, DotDict,
+from robot.utils import (get_env_var, get_env_vars, get_error_message,
+                         is_dict_like, is_iterable, normalize, DotDict,
                          NormalizedDict)
 
 from .evaluation import evaluate_expression
@@ -73,7 +73,7 @@ class VariableFinder(object):
 
     def _validate_value(self, value, identifier, name):
         if identifier == '@':
-            if not is_list_like(value) and not is_bytes(value):
+            if not is_iterable(value):
                 raise VariableError("Value of variable '%s' is not list or "
                                     "list-like." % name)
             return list(value)
