@@ -47,10 +47,10 @@ Failing list
 Failing dict
     Check Test Case    ${TESTNAME}
 
-Open files are not lists
+Open files are iterable
     Check Test Case    ${TESTNAME}
 
-Closed files are not lists
+Closed files are not iterable
     Check Test Case    ${TESTNAME}
 
 *** Keywords ***

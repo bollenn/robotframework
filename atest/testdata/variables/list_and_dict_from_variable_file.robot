@@ -79,10 +79,9 @@ Failing dict
     [Documentation]    FAIL Resolving variable '\&{FAILING DICT}' failed: Bang
     Log Many   &{FAILING DICT}
 
-Open files are not lists
-    [Documentation]    FAIL Value of variable '\@{OPEN FILE}' is not list or list-like.
+Open files are iterable
     Log Many    @{OPEN FILE}
 
-Closed files are not lists
-    [Documentation]    FAIL Value of variable '\@{CLOSED FILE}' is not list or list-like.
+Closed files are not iterable
+    [Documentation]    FAIL Value of variable '\@{CLOSED FILE}' is not iterable.
     Log Many    @{CLOSED FILE}
