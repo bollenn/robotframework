@@ -2,6 +2,7 @@
 Variables    scalar_lists.py
 
 *** Variables ***
+${INT}         ${15}
 @{VARIABLE}    list    values
 @{LIST2}       spam   eggs     ${21}
 
@@ -13,7 +14,7 @@ List can overwrite scalar
 
 Scalar can overwrite list
     [Documentation]    FAIL Value of variable '\@{VARIABLE}' is not iterable.
-    ${variable}=    Set variable   ${15}
+    ${variable}=    Set variable   ${INT}
     Log Many    @{VARIABLE}
 
 Variables from file

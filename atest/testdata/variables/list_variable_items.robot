@@ -1,4 +1,5 @@
 *** Variables ***
+${INT}        ${15}
 @{LIST}       A    B    C    D    E    F    G    H    I    J    K
 @{NUMBERS}    1    2    3
 &{MAP}        first=0    last=-1
@@ -93,9 +94,9 @@ Non-existing index variable
 
 Non-list variable
     [Documentation]    FAIL
-    ...    Variable '\${15}' is integer, which is not iterable, \
+    ...    Variable '\${INT}' is integer, which is not iterable, \
     ...    and thus accessing item '0' from it is not possible.
-    Log    ${15}[0]
+    Log    ${INT}[0]
 
 Old syntax with `@` still works but is deprecated
     [Documentation]    `\${list}[1]` and `\@{list}[1]` work same way still.
