@@ -12,13 +12,13 @@ Scalar Iterable As List Variable
 Scalar Variable As List With Extended Syntax
     Check Test Case    ${TESTNAME}
 
-Extended syntax with non-list value
+Extended syntax with non-iterables value
     Check Test Case    ${TESTNAME}
 
 Non-alphanumeric characters in name
     Check Test Case    ${TESTNAME}
 
-String Cannot Be Used As List Variable
+String Can Be Used As List Variable
     Check Test Case    ${TESTNAME}
 
 Non-Iterables Cannot Be Used As List Variable
