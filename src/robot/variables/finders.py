@@ -74,8 +74,8 @@ class VariableFinder(object):
     def _validate_value(self, value, identifier, name):
         if identifier == '@':
             if not is_iterable(value):
-                raise VariableError("Value of variable '%s' is not list or "
-                                    "list-like." % name)
+                raise VariableError("Value of variable '%s' is not iterable."
+                                    % name)
             return list(value)
         if identifier == '&':
             if not is_dict_like(value):
