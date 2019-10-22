@@ -15,8 +15,8 @@
 
 from robot.errors import DataError, VariableError
 from robot.output import librarylogger as logger
-from robot.utils import (escape, is_dict_like, is_list_like, type_name,
-                         unescape, unic)
+from robot.utils import (escape, is_bytes, is_dict_like, is_list_like,
+                         type_name, unescape, unic)
 
 from .search import search_variable, VariableMatch
 
